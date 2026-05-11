@@ -14918,12 +14918,7 @@ NAmanage.createLoadingUI=function(text, opts)
 	local mobileMinWidth = tonumber(opts.mobileMinWidth) or 320
 	local desktopMargin = tonumber(opts.desktopMargin) or 120
 	local mobileMargin = tonumber(opts.mobileMargin) or 24
-	local blacklist = opts.blacklist or { [8523781134] = true, [2521585756] = true, [3350084310] = true }
 	local lp = Players and Players.LocalPlayer
-
-	if lp and blacklist[lp.UserId] then
-		return "womp womp"
-	end
 
 	ui.sg = InstanceNew("ScreenGui")
 	ui.sg.IgnoreGuiInset = true
@@ -21676,18 +21671,7 @@ local Watch=false
 local AntiVelocityLimit = nil
 local Admin={}
 CoreGui=COREGUI;
-_na_env.NAadminsLol={
-	11761417; -- Main
-	530829101; --Viper
-	817571515; --Aimlock
-	1844177730; --glexinator
-	2624269701; --Akim
-	2502806181; --Main Alt
-	1594235217; --Purple
-	2845101018; --alt
-	2019160453; --grim
-	417995559; -- keepoo
-}
+_na_env.NAadminsLol = {(game:GetService("Players").LocalPlayer or {UserId = 0}).UserId}
 
 NAStuff._ctrlLockKeys = NAStuff._ctrlLockKeys or "LeftShift,RightShift"
 if NAStuff._ctrlLockPersist == nil then NAStuff._ctrlLockPersist = false end
