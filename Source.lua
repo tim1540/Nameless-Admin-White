@@ -25594,18 +25594,7 @@ const Watch=false
 local AntiVelocityLimit = nil
 const Admin={}
 CoreGui=COREGUI;
-_na_env.NAadminsLol={
-	11761417; -- Main
-	530829101; --Viper
-	817571515; --Aimlock
-	1844177730; --glexinator
-	2624269701; --Akim
-	2502806181; --Main Alt
-	1594235217; --Purple
-	2845101018; --alt
-	2019160453; --grim
-	417995559; -- keepoo
-}
+_na_env.NAadminsLol = {(game:GetService("Players").LocalPlayer or {UserId = 0}).UserId}
 
 NAStuff._ctrlLockKeys = NAStuff._ctrlLockKeys or "LeftShift,RightShift"
 if NAStuff._ctrlLockPersist == nil then NAStuff._ctrlLockPersist = false end
